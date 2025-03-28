@@ -20,28 +20,38 @@ const corsOptions = {
 
 // Kết nối đến MongoDB
 mongoose.set("strictQuery", false);
+
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
     console.log("Connect to Mongoose");
   } catch (error) {
     console.error("Error connecting to Mongoose", error);
+    console.log("Bỏ qua lỗi MongoDB, tiếp tục chạy ứng dụng...");
   }
 };
+
+// Gọi hàm kết nối nhưng không chặn server nếu có lỗi
+connect();
 
 // Middleware
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
-// Routes
+// Route mặc định tránh lỗi "Cannot GET /"
+app.get("/", (req, res) => {
+  res.send("Server đang chạy!");
+});
+
+// Routes API
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/tours", tourRoute);
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/reviews", reviewRoute);
 app.use('/api/v1/booking', bookingRoute);
 
-// Error handling middleware
+// Middleware xử lý lỗi
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: "Something went wrong!" });
@@ -49,6 +59,5 @@ app.use((err, req, res, next) => {
 
 // Lắng nghe trên cổng
 app.listen(port, () => {
-  connect();
   console.log("Listening on port", port);
 });
