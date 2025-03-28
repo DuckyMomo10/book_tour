@@ -1,0 +1,186 @@
+.hero_subtitle img {
+    width: 2.3rem;
+    height: 2.3rem;
+    font-family: var(--subtitle-font-name);
+}
+
+.hero_content h1 {
+    font-style: 3.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+}
+
+.hero_content h1 .highlight {
+    color: var(--secondary-color);
+}
+
+.hero_content p {
+    font-style: 1.1rem;
+    color: var(--text-color);
+    line-height: 2rem;
+}
+
+.hero_img-box img,
+.hero_img-box video {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+    object-fit: cover;
+}
+
+.hero_content {
+    padding-top: 3.5rem;
+}
+
+.hero_img-box {
+    padding-top: 2rem;
+}
+
+.services_subtitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #ee6e6e;
+    font-family: var(--subtitle-font-name);
+}
+
+.service_title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.featured_tour-title {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.experience_content h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.experience_content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.counter_wrapper {
+    margin-top: 2.5rem;
+}
+
+.counter_box span {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 10px 5px 10px 5px;
+}
+
+.counter_box h6 {
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
+    color: var(--text-color);
+}
+
+.experience_img img {
+    width: 90%;
+}
+
+.gallery_title {
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+
+.masonry_img {
+    transition: 0.3s;
+}
+
+.masonry_img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.testimonials_title {
+    font-size: 2.3rem;
+    margin-top: 1rem;
+}
+
+.sticky_header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 6px -3px #ddd;
+    z-index: 999;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .hero_content h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero_img-box {
+        display: none;
+    }
+
+    .hero_video-box {
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+
+    .service_title,
+    .featured_tour-title,
+    .gallery_title,
+    .testimonials_title,
+    .experience_content h2 {
+        font-size: 2rem;
+    }
+
+    .experience_img {
+        margin-top: 2rem;
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .hero_content h1 {
+        font-size: 1.8rem;
+    }
+
+    .service_title,
+    .featured_tour-title,
+    .gallery_title,
+    .testimonials_title,
+    .experience_content h2 {
+        font-size: 1.5rem;
+    }
+
+    .experience_img {
+        width: 100%; /* Đặt chiều rộng 100% để hình ảnh phù hợp với màn hình nhỏ */
+        margin-top: 20px; /* Thêm khoảng cách phía trên */
+      }
+    
+      .experience_img img {
+        width: 100%; /* Đảm bảo ảnh hiển thị đầy đủ trong phần tử cha */
+        height: auto; /* Điều chỉnh chiều cao tự động theo tỷ lệ khung hình */
+        border-radius: 10px; /* Có thể thêm bo tròn góc cho ảnh */
+      }
+}

@@ -1,0 +1,33 @@
+.pagination span {
+   width: 2.5rem; 
+   height: 2.5rem; 
+   padding: 5px;
+   padding-bottom: 8px;
+   padding-left: 5.5px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--secondary-color);
+   color: var(--heading-color);
+   font-size: 1.2rem; 
+   cursor: pointer;
+   font-weight: 700;
+   transition: background 0.3s, color 0.3s;
+}
+
+.search {
+   cursor: pointer;
+   margin-left: 25%;
+   font-size: 12px;
+}
+
+.pagination span:hover {
+   background: var(--secondary-color); 
+   color: #fff; 
+}
+
+.active_page {
+   background: var(--secondary-color);
+   color: #fff !important;
+}

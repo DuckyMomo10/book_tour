@@ -1,0 +1,10 @@
+.thank_you {
+    font-size: 4rem;
+    color: green;
+}
+
+.thank_you h1 {
+    font-size: 3.6rem;
+    color: green ;
+    font-family: var(--subtitle-font-name);
+}

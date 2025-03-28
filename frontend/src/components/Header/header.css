@@ -1,0 +1,124 @@
+.header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo img {
+    width: 30%;
+}
+
+.menu {
+    margin-bottom: 0;
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 1.1rem; /* Thay đổi từ font-style thành font-size */
+}
+
+.nav_item a:hover {
+    color: inherit;
+}
+
+.nav_item a.active_link {
+    color: var(--secondary-color);
+}
+
+.mobile_menu {
+    font-size: 1.3rem; /* Thay đổi từ font-style thành font-size */
+    color: var(--heading-color);
+    display: none;
+}
+
+.sticky_header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 8px -3px #ddd;
+    z-index: 999;
+}
+
+/* Responsive */
+@media only screen and (max-width: 992px) {
+    .logo img {
+        width: 20%;
+    }
+
+    .navigation {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.411);
+        z-index: 999;
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - 75%);
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        line-height: 0.5rem;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .show_menu {
+        display: block; /* Hiển thị menu khi toggle */
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logo img {
+        width: 45%;
+    }
+
+    .menu {
+        width: calc(100% - 50%);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .logo img {
+        width: 50%; /* Điều chỉnh kích thước logo để phù hợp với màn hình nhỏ */
+    }
+
+    .menu {
+        width: calc(100% - 70%); /* Điều chỉnh độ rộng của menu */
+        right: 30%;
+    }
+
+    .nav_item a {
+        font-size: 0.9rem; /* Giảm kích thước chữ trong menu */
+    }
+
+    .mobile_menu {
+        font-size: 1.1rem; /* Điều chỉnh kích thước font cho biểu tượng menu */
+    }
+
+    .sticky_header {
+        height: 60px; /* Giảm chiều cao của header sticky để tiết kiệm không gian */
+        line-height: 60px;
+    }
+}

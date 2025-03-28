@@ -1,0 +1,115 @@
+/* Cấu trúc cơ bản */
+.about-container {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    background-color: #f9f9f9; /* Màu nền nhạt tạo sự tinh tế */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tiêu đề chính */
+  .about-title {
+    color: #fe7d01;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .about-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 10px auto 0;
+    background-color: #fe7d01;
+    border-radius: 2px;
+  }
+  
+  /* Tiêu đề phụ */
+  .about-heading {
+    color: #fe7d01;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .about-heading::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fe7d01;
+    margin-top: 5px;
+    border-radius: 2px;
+  }
+  
+  /* Phong cách văn bản */
+  .about-container p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-brand {
+    color: #fe7d01;
+    font-weight: bold;
+  }
+  
+  /* Hộp dịch vụ */
+  .service-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-box h5 {
+    color: #fe7d01;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .service-box p {
+    color: #666;
+  }
+  
+  /* Hình ảnh */
+  .about-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Cảm ơn */
+  .about-footer {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .about-footer span {
+    color: #fe7d01;
+    font-weight: bold;
+  }
+  
