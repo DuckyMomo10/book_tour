@@ -24,15 +24,12 @@ mongoose.set("strictQuery", false);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("Connect to Mongoose");
+    console.log("✅ Kết nối MongoDB thành công!");
   } catch (error) {
-    console.error("Error connecting to Mongoose", error);
-    console.log("Bỏ qua lỗi MongoDB, tiếp tục chạy ứng dụng...");
+    console.error("❌ Lỗi kết nối MongoDB:", error);
+    process.exit(1); // Dừng server nếu không kết nối được
   }
 };
-
-// Gọi hàm kết nối nhưng không chặn server nếu có lỗi
-connect();
 
 // Middleware
 app.use(express.json());
@@ -57,7 +54,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Something went wrong!" });
 });
 
-// Lắng nghe trên cổng
-app.listen(port, () => {
-  console.log("Listening on port", port);
+// Kết nối MongoDB trước khi khởi chạy server
+connect().then(() => {
+  app.listen(port, () => {
+    console.log(`🚀 Server đang lắng nghe trên cổng ${port}`);
+  });
 });
